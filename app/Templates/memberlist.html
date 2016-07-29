@@ -1,0 +1,9 @@
+<input type="text" [(ngModel)]="searchString" placeholder="S&ouml;k"/>
+
+<!--<div class="statusArea" [ngClass]="{activeMember: rowActivated, inActiveMember: !rowActivated}">Status</div>-->
+
+<div class="memberArea" *ngIf="listOfMembers && listOfMembers.length">
+    
+        <member-card *ngFor="let member of listOfMembers | memberFilter: searchString" [firstName]="member.firstName" [surName]="member.surName" [email]="member.email" [identifier]="member.identifier" [number]="member.number" (activeHandler)="onNotify($event)">
+        </member-card>
+</div>

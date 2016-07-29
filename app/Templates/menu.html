@@ -1,0 +1,16 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" [routerLink]="['Member']">AMS</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li [ngClass]="{active: isActive('Customers')}"><a [routerLink]="['Customer']" (click)="onMenuClicked('Customers')">Kunder</a></li>
+      <li [ngClass]="{active: isActive('Members')}"><a [routerLink]="['Member']" (click)="onMenuClicked('Members')">Medlemmar</a></li>
+      <li><a>Arena</a></li> 
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a>AA</a></li>
+        <li><a>BB</a></li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,11 @@
+﻿    <div [title]="memberTitle" class="cardContainer" [ngClass]="{cardEven: isEven(), cardOdd: !isEven()}">
+        <div class="cardTop">
+           <div class="cardItem cardNumber">{{number}}</div>
+           <div class="cardItem cardName">{{firstName}} {{surName}}</div>
+           <div class="cardItem cardEmail">{{email}}</div>
+           <div class="cardItem cardIdentifier">{{identifier}}</div>  
+        </div>
+    </div>
+<!--<div class="cardBottom">
+    <div (click)="onActiveClicked()" class="cardButton">{{activeButtonText}}</div>
+</div>-->
